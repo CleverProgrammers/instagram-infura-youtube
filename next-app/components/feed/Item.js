@@ -16,8 +16,6 @@ const style = {
 const FeedItem = ({ data }) => {
   const [randomLikeNumber, setRandomLikeNumber] = useState(0)
 
-  const userAddress = ''
-
   useEffect(() => {
     setRandomLikeNumber(Math.floor(Math.random() * 100))
   }, [])
@@ -33,7 +31,7 @@ const FeedItem = ({ data }) => {
 
       <Caption
         data={{
-          username: userAddress,
+          username: truncateEthAddress(data.author),
           caption: data.caption,
         }}
       />
