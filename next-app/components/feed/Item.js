@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react'
-import { useAppContext } from '../../context/context'
 import Border from '../common/Border'
 import PostHeader from './PostHeader'
 import ActionButtons from './ActionButtons'
@@ -15,8 +14,9 @@ const style = {
 }
 
 const FeedItem = ({ data }) => {
-  const { userAddress } = useAppContext()
   const [randomLikeNumber, setRandomLikeNumber] = useState(0)
+
+  const userAddress = ''
 
   useEffect(() => {
     setRandomLikeNumber(Math.floor(Math.random() * 100))

@@ -1,9 +1,6 @@
 import Image from 'next/image'
 import RightBarSuggestions from './RightBarSuggestions'
 import DisplayName from './common/DisplayName'
-import { useAccount } from 'wagmi'
-import { useEffect, useState } from 'react'
-import truncateEthAddress from 'truncate-eth-address'
 
 const style = {
   wrapper: `suggestions hidden lg:flex lg:flex-col`,
@@ -13,14 +10,7 @@ const style = {
 }
 
 const HomeRightBar = ({ data }) => {
-  const [userAddress, setUserAddress] = useState('')
-  const { address } = useAccount()
-
-  useEffect(() => {
-    if (address) {
-      setUserAddress(truncateEthAddress(address))
-    }
-  }, [address])
+  const userAddress = ''
 
   return (
     <div className={style.wrapper}>
@@ -29,7 +19,7 @@ const HomeRightBar = ({ data }) => {
           <div className={style.userInfoContainer}>
             <div className={style.imageContainer}>
               <Image
-                src={`https://avatars.dicebear.com/api/pixel-art/${address}.svg`}
+                src={`https://avatars.dicebear.com/api/pixel-art/${userAddress}.svg`}
                 layout='fill'
                 className={style.image}
                 alt={0}

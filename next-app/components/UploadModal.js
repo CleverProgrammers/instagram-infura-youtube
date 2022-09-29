@@ -1,7 +1,5 @@
 import { useState } from 'react'
 import { useRouter } from 'next/router'
-import { useAccount } from 'wagmi'
-import { useAppContext } from '../context/context'
 
 const style = {
   wrapper: `w-full h-full flex flex-col`,
@@ -14,7 +12,7 @@ const UploadModal = () => {
   const router = useRouter()
   const [description, setDescription] = useState('')
 
-  const { uploadImage } = useAppContext()
+  const uploadImage = () => {}
 
   const handleSubmit = async (
     event,

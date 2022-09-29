@@ -1,5 +1,4 @@
 import { data } from '../static/example_data'
-import { useAppContext } from '../context/context'
 import Layout from '../components/Layout'
 import Stories from '../components/stories/Stories'
 import HomeRightBar from '../components/HomeRightBar'
@@ -11,7 +10,7 @@ const style = {
 }
 
 const Home = () => {
-  const { posts } = useAppContext()
+  const posts = []
 
   return (
     <>
