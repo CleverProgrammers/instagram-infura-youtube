@@ -1,7 +1,7 @@
 import ContractABI from './Instagram.json'
 import Web3 from 'web3'
 
-export const address = '0x8e29B05a30e7e4523A52E26948517551FB59a37D'
+export const address = ''
 
 export const createContract = () => {
   const { ethereum } = window
